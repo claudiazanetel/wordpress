@@ -15,6 +15,7 @@
 *.launch
 .settings/
 *.sublime-workspace
+*.sublime-project
 
 # IDE - VSCode
 .vscode/*
@@ -39,3 +40,4 @@ testem.log
 #System Files
 .DS_Store
 Thumbs.db
+.vagrant
