@@ -1,0 +1,150 @@
+- hosts: all
+  sudo: yes
+  vars:
+    virtual_host_name: wordpress
+    document_root: /var/www/html/wordpress
+    apache_log_dir: /var/log/apache2
+    theme_name: wp-angular2-theme
+  tasks:
+  - name: Update apt cache
+    apt: update_cache=yes cache_valid_time=3600
+    sudo: yes
+
+  - name: get repository for nodejs 7
+    get_url:
+      url: https://deb.nodesource.com/setup_7.x
+      dest: /tmp/nodesource_setup.sh
+
+  - name: install repository for nodejs 7
+    command: bash nodesource_setup.sh
+    args:
+      chdir: /tmp
+    sudo: yes
+
+  - name: Install required software
+    apt: name={{ item }} state=present
+    sudo: yes
+    with_items:
+      - apache2
+      - mysql-server
+      - php-mysql
+      - php
+      - libapache2-mod-php
+      - php-mcrypt
+      - python-mysqldb
+      - php-curl
+      - php-gd
+      - php-mbstring
+      - php-mcrypt
+      - php-xml
+      - php-xmlrpc
+      - php-gd
+      - unzip
+      - nodejs
+      - build-essential
+
+  - name: enabled mod_rewrite
+    apache2_module: name=rewrite state=present
+    sudo: yes
+
+  - name: create document root
+    file:
+      path: "{{ document_root }}"
+      owner: vagrant
+      group: www-data
+      state: directory
+
+  - name: create virtualhost
+    template:
+      src: virtualhost.j2
+      dest: /etc/apache2/sites-available/wordpress.conf
+      owner: root
+      group: root
+      mode: 0644
+    sudo: yes
+
+  - name: enable site
+    command: a2ensite wordpress.conf
+    sudo: yes
+
+  - name: Create mysql database
+    mysql_db:
+      name=wordpress
+      state=present
+    sudo: yes
+
+  - name: Create mysql user
+    mysql_user:
+      name=wordpress
+      password=wordpress
+      priv=wordpress.*:ALL
+    sudo: yes
+
+  - name: Ensure WP-CLI is installed
+    get_url:
+      url: https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+      dest: /tmp/wp-cli.phar
+      mode: 0755
+    sudo: yes
+
+  - name: move WP-CLI
+    command: mv /tmp/wp-cli.phar /usr/local/bin/wp
+    sudo: yes
+
+  - name: install wp-cli config file
+    copy:
+      src: wp-cli.yml
+      dest: "{{ document_root }}"
+      owner: vagrant
+      group: www-data
+
+  - name: download wp
+    command: wp core download
+    args:
+      chdir: "{{ document_root }}"
+    become: yes
+    become_user: vagrant
+    ignore_errors: yes
+
+  - name: configure WordPress 
+    shell: >
+      wp core config
+      --skip-plugins
+      --dbhost=localhost
+      --dbname=wordpress
+      --dbuser=wordpress
+      --dbpass=wordpress
+    args:
+      chdir: "{{ document_root }}"
+    become: yes
+    become_user: vagrant
+    ignore_errors: yes
+
+  - name: install wp
+    command: wp core install --url=wordpress.dev --title=Example --admin_user=admin --admin_password=admin --admin_email=admin@wordpress.dev
+    args:
+      chdir: "{{ document_root }}"
+    become: yes
+    become_user: vagrant
+    ignore_errors: yes
+
+  - name: create htaccess
+    command: wp rewrite flush --hard
+    args:
+      chdir: "{{ document_root }}"
+    become: yes
+    become_user: vagrant
+    ignore_errors: yes
+
+  - name: create theme link
+    file:
+      src: /vagrant
+      dest: "{{ document_root }}/wp-content/themes/{{ theme_name }}"
+      state: link
+
+  - name: restart apache
+    service: name=apache2 state=restarted
+    sudo: yes
+
+  - name: install angular cli
+    command: npm install -g @angular/cli

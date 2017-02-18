@@ -1,0 +1,18 @@
+<VIRTUALHOST *:80>
+    ServerAdmin webmaster@localhost
+    ServerName {{ virtual_host_name }}.dev
+
+    DocumentRoot {{ document_root }}
+    <DIRECTORY {{ document_root }}>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Order allow,deny
+        allow from all
+        Require all granted
+    </DIRECTORY>
+
+    ErrorLog {{ apache_log_dir }}/{{ virtual_host_name }}_error.log
+    # Possible values: debug, info, notice, warn, error, crit, alert, emerg
+    LogLevel warn
+    CustomLog {{ apache_log_dir }}/{{ virtual_host_name }}_access.log combined
+</VIRTUALHOST>
