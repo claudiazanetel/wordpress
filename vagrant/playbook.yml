@@ -159,6 +159,11 @@
     become_user: root
     become_method: sudo
 
+  - name: install angular2 dependencies
+    command: npm install --no-bin-links
+    args:
+      chdir: /vagrant
+
   - name: build angular app
     command: ng build --prod --deploy-url="/wp-content/themes/{{ theme_name }}/dist/"
 
