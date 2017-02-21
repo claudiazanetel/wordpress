@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  base_url: 'http://wordpress.dev/wp-json/wp/v2'
 };
