@@ -154,19 +154,6 @@
     become_user: root
     become_method: sudo
 
-  - name: install angular cli
-    command: npm install -g @angular/cli
-    become_user: root
-    become_method: sudo
-
-  - name: install angular2 dependencies
-    command: npm install --no-bin-links
-    args:
-      chdir: /vagrant
-
-  - name: build angular app
-    command: ng build --prod --deploy-url="/wp-content/themes/{{ theme_name }}/dist/"
-
   - name: activate wp-angular2-theme
     command: wp theme activate "{{ theme_name }}"
     args:
