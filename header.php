@@ -3,10 +3,11 @@
 <!DOCTYPE html>
     <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory();?>/style.css" />
+        <?php wp_head(); ?>
     </head>
-    <body>
+    <?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
         <nav class="navbar navbar-default" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -18,7 +19,6 @@
                     </button>
                     <a class="navbar-brand" href="#"><?php echo get_bloginfo('name'); ?></a>
                 </div>
-            <div class="container-fluid">
                 <?php
                     wp_nav_menu( array(
                         'menu'              => 'header-menu',
