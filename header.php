@@ -19,6 +19,7 @@
                     </button>
                     <a class="navbar-brand" href="<?php echo get_home_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
                 </div>
+
                 <?php
                     wp_nav_menu( array(
                         'menu'              => 'header-menu',
