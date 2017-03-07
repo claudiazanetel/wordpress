@@ -1,4 +1,10 @@
 <?php
+
+    /**
+    * Define default background image
+    **/
+	define('BACKGROUND_IMAGE',get_template_directory_uri().'/images/mp-background-tile.jpg');
+
     /**
     * Registers menu
     **/
