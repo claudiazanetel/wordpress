@@ -8,7 +8,7 @@
         <?php wp_head(); ?>
     </head>
     <?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
-        <nav class="navbar navbar-fixed-top col-sm-6 col-sm-offset-5" role="navigation">
+        <nav class="navbar navbar-fixed-top col-sm-7 col-sm-offset-3" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
