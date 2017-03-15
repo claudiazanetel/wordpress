@@ -26,11 +26,13 @@ Menu
 **/
 
 .navbar {
-	margin-top: 1%;
+
     /*background: url(images/mp-sprite-master.png) no-repeat 0px 45px scroll, url(images/mp-sprite-content-bg.png);*/
 	background: url(images/mp-sprite-content-bg.png);
-	background-repeat: no-repeat;
-    box-shadow: 3px 3px 3px #000000;
+	border-radius:0em;
+
+
+    /*box-shadow: 3px 3px 3px #000000;*/
 
 }
 
@@ -48,13 +50,18 @@ li.menu-item > a {
     font-weight: bold;
 }
 
+#menu_col{
+	padding-right: 0px;
+}
+
 /**
 Page
 **/
 
 #all_page{
 	background: url(images/mp-sprite-content-bg.png);
-	background-repeat: no-repeat;
+	min-height: 800px;
+	padding: 15px;
 }
 
 
@@ -64,9 +71,24 @@ Page
 Sidebar
 */
 
-label[for="s"]
+h1:after
 {
-    display:none;
+    font-family: 'FontAwesome';
+	content: "\f002";
+	position: relative;
+	margin-right: 5px;
+	font-size: 100%;
 }
 
+form.searchform {
+	font-family: 'FontAwesome';
+}
+
+form.searchform label:after {
+	font-family: 'FontAwesome';
+	content: "\f002";
+	position: relative;
+	margin-right: 5px;
+	font-size: 100%;
+}
 

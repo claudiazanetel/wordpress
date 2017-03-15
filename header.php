@@ -3,7 +3,7 @@
 <!DOCTYPE html>
     <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <?php wp_head(); ?>
     </head>
@@ -13,7 +13,7 @@
         <!--<div class='row' id='main_row'>
             <div class='col-sm-10 col-sm-offset-1' id='main_offset'>-->
                 <div class='row' id='menu_row'>
-                    <div class='col-sm-10 col-sm-offset-1'>
+                    <div class='col-sm-8 col-sm-offset-3' id='menu_col'>
                         <nav class="navbar" role="navigation">
                             <div class="container-fluid">
                                 <div class="navbar-header">
