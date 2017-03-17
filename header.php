@@ -9,13 +9,13 @@
     </head>
     <?php //echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
     <body>
-    <div class='container'>
+    <div class='container-fluid'>
         <!--<div class='row' id='main_row'>
             <div class='col-sm-10 col-sm-offset-1' id='main_offset'>-->
                 <div class='row' id='menu_row'>
                     <div class='col-sm-8 col-sm-offset-3' id='menu_col'>
                         <nav class="navbar" role="navigation">
-                            <div class="container-fluid">
+                            <div class="container">
                                 <div class="navbar-header">
                                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                                         <span class="sr-only">Toggle navigation</span>

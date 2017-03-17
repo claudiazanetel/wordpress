@@ -5,7 +5,7 @@
 
 
 <div class='row'>
-	<div class='col-md-10 col-md-offset-1' id='all_page'>
+	<div class='col-sm-10 col-sm-offset-1' id='all_page'>
 		<div class='row'>
 			<div class='col-sm-9' id='main-page'>
 		    	<?php if (!is_front_page()):?>
