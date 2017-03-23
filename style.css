@@ -99,13 +99,17 @@ Sidebar
 
 }*/
 
+#searchform{
+	padding-bottom: 5%;
+}
+
 #widget{
 
 	min-height:80px;
 	margin-top: 7%; 
 	margin-right: 5%;
 	margin-left:0%;
-	padding:2%;
+	padding:5%;
 
 	background:
 		top right url('images/sidebar-bg-top-right.png') no-repeat,

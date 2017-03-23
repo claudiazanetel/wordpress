@@ -18,7 +18,7 @@
 				?>
 			</div>
 
-			<div class='col-md-3' id='sidebar-div'>
+			<div class='col-md-3 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1' id='sidebar-div'>
 				<?php
 					get_sidebar();
 				?>
