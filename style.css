@@ -125,5 +125,7 @@ Sidebar
 
 }
 
-
+#banner{
+	max-width: 95%;
+	height: auto;
 }

@@ -75,4 +75,20 @@
 	}
 	add_action( 'widgets_init', 'widgets_init' );
 
+	/**
+	 * Add image header
+	 *
+	 */
+	$args = array(
+	    'flex-width'    => true,
+	    'width'         => 800,
+	    'flex-height'   => true,
+	    'height'        => 300,
+	    'default-image' => get_template_directory_uri() . '/images/header.jpg',
+	);
+	add_theme_support( 'custom-header', $args );
+
+
+
+
 ?>
