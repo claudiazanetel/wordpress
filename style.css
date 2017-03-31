@@ -30,14 +30,16 @@ body {
 Menu
 **/
 
-.navbar {
+	
 
-    /*background: url(images/mp-sprite-master.png) no-repeat 0px 45px scroll, url(images/mp-sprite-content-bg.png);*/
+
+.navbar {  
 	background: url(images/mp-sprite-content-bg.png);
 	background-size: 100%;
 	box-shadow: 0 8px 8px -6px black;
-
 }
+
+
 
 .icon-bar {
 	background-color: black;
@@ -71,10 +73,11 @@ Page
 	background-size: 100%;
 	min-height: 500px;
 	padding: 15px;
+	padding-top: 5%;
 }
 
 #main-page{
-	padding-top: 3%;
+	padding-top: 30px;
 }
 
 #sidebar-div{
@@ -131,19 +134,13 @@ Sidebar
 
 }
 
-#div-headerimage{
-	background: url(images/mp-sprite-header-bg2.png);
-	background-repeat:repeat-y;
-	margin-right: 1.5%;
-	
-}
-
-#col-headerimage{
-	padding-right: 0;
-}
 
 #banner{
-	width: 100%;
+	width: 86%;
 	height: auto;
-	padding:1.5%;
+
+	box-shadow:
+  		0 0 0 1px black,
+  		0 0 0 10px #F8F8FF,
+  		0 0px 14px 10px rgba(0, 0, 0, 0.4);
 }
