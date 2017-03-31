@@ -6,8 +6,8 @@
 
 <div class='row'>
 	<div class='col-lg-10 col-lg-offset-1' id='all_page'>
-		<div class ='row'>
-			<div class='col-lg-12'>
+		<div class ='row' id='div-headerimage'>
+			<div class=class='col-lg-12' id='col-headerimage'>
 				<img id="banner" alt="" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>">
 			</div>
 		</div>

@@ -73,7 +73,13 @@ Page
 	padding: 15px;
 }
 
+#main-page{
+	padding-top: 3%;
+}
 
+#sidebar-div{
+	padding-top: 3%;
+}
 
 /*
 Sidebar
@@ -125,7 +131,19 @@ Sidebar
 
 }
 
+#div-headerimage{
+	background: url(images/mp-sprite-header-bg2.png);
+	background-repeat:repeat-y;
+	margin-right: 1.5%;
+	
+}
+
+#col-headerimage{
+	padding-right: 0;
+}
+
 #banner{
-	max-width: 95%;
+	width: 100%;
 	height: auto;
+	padding:1.5%;
 }
