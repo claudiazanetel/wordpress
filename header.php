@@ -13,7 +13,7 @@
         <!--<div class='row' id='main_row'>
             <div class='col-sm-10 col-sm-offset-1' id='main_offset'>-->
                 <div class='row' id='menu_row'>
-                    <div class='col-lg-8 col-lg-offset-3 col-md-9 col-md-offset-3 col-sm-10 col-sm-offset-2' id='menu_col'>
+                    <div class='col-md-8 col-md-offset-3 col-sm-10 col-sm-offset-2' id='menu_col'>
                         <nav class="navbar" role="navigation">
                             <div class="container">
                                 <div class="navbar-header">

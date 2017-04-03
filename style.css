@@ -20,11 +20,17 @@ h1, .h1 { font-weight:normal; }
 /*h2, .h2 { font-size:28px; letter-spacing:-1px; }*/
 h2, .h2 { font-size:20px; letter-spacing:-0.5px; }
 
-body { 
-	background:url(images/mp-background-tile.jpg) center top; text-align:center;
-	margin: 7%; 
-	margin-top: 1%;
+body{
+	background:url(images/mp-background-tile.jpg) center top; 
 }
+
+.container-fluid { 
+	text-align:center;
+	overflow-x:hidden;
+}
+
+
+
 
 /**
 Menu
@@ -135,12 +141,43 @@ Sidebar
 }
 
 
+
+#div-headerimage{
+
+	position: relative;
+	display: block;
+}
+
 #banner{
+	margin-left:auto; 
+	margin-right:auto; 
+	position:relative; 
+	z-index:5; 
 	width: 86%;
 	height: auto;
-
 	box-shadow:
   		0 0 0 1px black,
   		0 0 0 10px #F8F8FF,
   		0 0px 14px 10px rgba(0, 0, 0, 0.4);
 }
+
+#logo { position:relative; z-index:10; top:-30px; left:7px;}
+	#logo-2 { 
+		background:url(images/mp-sprite-master.png) no-repeat right -226px; 
+		padding-right:70px; 
+		height:133px;
+		 position:absolute; 
+		 z-index:20; }
+	#logo-3 { 
+		background:url(images/mp-sprite-master.png) no-repeat 0px -50px; 
+		padding-left:80px; 
+		height:133px; 
+		min-width:110px; 
+		text-align:center; 
+		float:left; 
+		line-height:normal; }
+	#logo a:link, #logo a:visited { font-family:'VollkornRegular', Geneva, sans-serif; color:#603913; text-decoration:none; color:#603913; letter-spacing:-1px; font-size:32px; white-space:nowrap; text-decoration:none; }
+	#logo a:hover { text-decoration:underline; }
+	#logo table, #logo td { border:0px; padding:0px; margin:0px; text-align:left; vertical-align:middle; height:120px; width:auto; }
+#site-title { margin-bottom:-12px; }
+#site-description { margin-top:12px; }
