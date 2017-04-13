@@ -6,8 +6,9 @@
 
 <div class='row'>
 	<div class='col-md-10 col-md-offset-1' id='all_page'>
-		<div class ='row'><?php ctx_aj_site_title() ;?>
-			<div class=class='col-lg-12' id='div-headerimage'>
+		<div class='row'>
+			<!--<div class="multi_bg_example"></div>-->
+			<div class='col-lg-12' id='div-headerimage'>
 				<img id="banner" alt="" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>">
 			</div>
 		</div>

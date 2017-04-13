@@ -94,26 +94,6 @@ Page
 Sidebar
 */
 
-/*#searchform{
-	min-height:80px;
-	margin-top: 2%; 
-	margin-right: 5%;
-	margin-left:5%;
-
-	background:
-		top right url('images/sidebar-bg-top-right.png') no-repeat,
-		top left url('images/sidebar-bg-top-left.png') no-repeat,
-		top center url('images/sidebar-bg-top.png') repeat-x,
-		bottom right url('images/sidebar-bg-bottom-right.png') no-repeat,
-		bottom left url('images/sidebar-bg-bottom-left.png') no-repeat,
-		bottom center url('images/sidebar-bg-bottom.png') repeat-x,
-		top left url('images/sidebar-bg-left.png') repeat-y,
-		top right url('images/sidebar-bg-right.png') repeat-y;
-
-	background-color:#e9e9e8;
-
-}*/
-
 #searchform{
 	padding-bottom: 5%;
 }
@@ -148,11 +128,31 @@ Sidebar
 	display: block;
 }
 
+.multi_bg_example {
+  background:
+    url(http://appartamentigermanabrunet.com/wp-content/themes/adventure-journal/images/mp-sprite-master.png) no-repeat 0px -50px;
+  min-width: 260px;
+  max-width: 830px;
+  width: 50%;
+  height: 133px;
+  position:relative;
+  z-index:5; 
+}
+.multi_bg_example::after {
+  content: '';
+  background:
+    url(http://appartamentigermanabrunet.com/wp-content/themes/adventure-journal/images/mp-sprite-master.png) right -226px;
+  width: 70px;
+  margin-right: -70px;
+  height: 133px;
+  float: right;
+}
+
 #banner{
 	margin-left:auto; 
 	margin-right:auto; 
 	position:relative; 
-	z-index:5; 
+
 	width: 86%;
 	height: auto;
 	box-shadow:
@@ -161,8 +161,8 @@ Sidebar
   		0 0px 14px 10px rgba(0, 0, 0, 0.4);
 }
 
-#logo { position:relative; z-index:10; top:-30px; left:7px;}
-	#logo-2 { 
+/*#logo { position:relative; z-index:10; top:-30px; left:7px;}*/
+/*	#logo-2 { 
 		background:url(images/mp-sprite-master.png) no-repeat right -226px; 
 		padding-right:70px; 
 		height:133px;
@@ -180,4 +180,4 @@ Sidebar
 	#logo a:hover { text-decoration:underline; }
 	#logo table, #logo td { border:0px; padding:0px; margin:0px; text-align:left; vertical-align:middle; height:120px; width:auto; }
 #site-title { margin-bottom:-12px; }
-#site-description { margin-top:12px; }
+#site-description { margin-top:12px; }-*
