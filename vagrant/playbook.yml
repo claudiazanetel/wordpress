@@ -158,3 +158,9 @@
     command: wp theme activate "{{ theme_name }}"
     args:
       chdir: "{{ document_root }}"
+
+  - name: folder permission
+    file:
+    path: "{{ document_root }}"
+    state: directory
+    mode: 0777
