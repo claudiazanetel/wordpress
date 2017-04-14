@@ -161,6 +161,6 @@
 
   - name: folder permission
     file:
-    path: "{{ document_root }}"
-    state: directory
-    mode: 0777
+      path: "{{ document_root }}"
+      state: directory
+      mode: 0777
