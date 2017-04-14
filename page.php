@@ -6,11 +6,13 @@
 
 <div class='row'>
 	<div class='col-md-10 col-md-offset-1' id='all_page'>
-		<div class ='row'><?php ctx_aj_site_title() ;?>
+		<div class ='row  hidden-xs'><?php ctx_aj_site_title() ;?></div>
 			<div class=class='col-lg-12' id='div-headerimage'>
-				<img id="banner" alt="" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>">
-			</div>
-		</div>
+				<a href="<?php echo get_home_url(); ?>">
+					<img id="banner" alt="" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>">
+				</a>
+			</div>			
+		
 		<div class='row' id='page'>
 			<div class='col-md-9' id='main-page'>
 		    	<?php if (!is_front_page()):?>

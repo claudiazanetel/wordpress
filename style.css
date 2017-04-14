@@ -142,11 +142,11 @@ Sidebar
 
 
 
-#div-headerimage{
+/*#div-headerimage{
 
 	position: relative;
 	display: block;
-}
+}*/
 
 #banner{
 	margin-left:auto; 
@@ -161,7 +161,7 @@ Sidebar
   		0 0px 14px 10px rgba(0, 0, 0, 0.4);
 }
 
-#logo { position:relative; z-index:10; top:-30px; left:7px;}
+#logo { position:relative; z-index:10; top:-30px; left:6%;}
 	#logo-2 { 
 		background:url(images/mp-sprite-master.png) no-repeat right -226px; 
 		padding-right:70px; 
@@ -180,4 +180,4 @@ Sidebar
 	#logo a:hover { text-decoration:underline; }
 	#logo table, #logo td { border:0px; padding:0px; margin:0px; text-align:left; vertical-align:middle; height:120px; width:auto; }
 #site-title { margin-bottom:-12px; }
-#site-description { margin-top:12px; }
+#site-description { margin-top:12px; text-align: center; }

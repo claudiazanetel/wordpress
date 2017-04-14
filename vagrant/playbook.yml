@@ -160,7 +160,4 @@
       chdir: "{{ document_root }}"
 
   - name: folder permission
-    file:
-      path: "{{ document_root }}"
-      state: directory
-      mode: 0777
+    command: "chmod -R 0777 {{ document_root }}/wp-content"
