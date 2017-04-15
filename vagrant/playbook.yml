@@ -137,6 +137,22 @@
       chdir: "{{ document_root }}"
     ignore_errors: yes
 
+  - name: install plugin wordpress-importer
+    command: wp plugin install wordpress-importer --activate
+    args:
+      chdir: "{{ document_root }}"
+
+  - name: install plugin transposh
+    command: wp plugin install /vagrant/vagrant/transposh.zip --activate
+    args:
+      chdir: "{{ document_root }}"
+
+  - name: import data
+    command: wp import /vagrant/vagrant/import.xml --authors=create
+    args:
+      chdir: "{{ document_root }}"
+      creates: "{{ document_root }}/data_imported"
+
   - name: create htaccess
     command: wp rewrite structure '/%year%/%monthnum%/%postname%' --hard
     args:
