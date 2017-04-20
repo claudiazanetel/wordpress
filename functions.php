@@ -88,46 +88,4 @@
 	);
 	add_theme_support( 'custom-header', $args );
 
-function ctx_aj_site_title(){
-
-//Get the theme options
-$themeOpts = get_option('ctx-adventurejournal-options');
-$themeTitle = $themeOpts['title-type'];
-
-//Check if a site title option has been set, if not use the default value
-if (!isset($themeTitle)){
-	$themeTitle = 'title-default';
-}
-
-//Check and see if the site title option is set to default or custom logo option
-if($themeTitle == 'title-default' || $themeTitle == 'title-logo'){
-	?>
-	<div id="logo">
-	  <div id="logo-2">
-		<div id="logo-3">
-		  <table><tr><td>
-              <?php
-			  //Display the default styling
-              if($themeTitle == 'title-default'){
-			   ?>
-              <div id="site-title"><a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				  <?php bloginfo( 'name' ); ?>
-				  </a></div>
-				<?php $sitedescr = get_bloginfo('description','display'); echo (empty($sitedescr)) ? '' : sprintf('<div id="site-description">%s</div>',$sitedescr);
-			  //Display the custom logo
-              } else {
-			  ?>
-              	<a href="<?php echo home_url( '/' ) ?>"><img src="<?php echo 'http://'.$_SERVER['SERVER_NAME'].'/'.$themeOpts['logo-path'];?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" /></a>
-              <?php
-              }
-			  ?>
-          </td></tr></table>
-		</div>
-	  </div>
-	</div>
-	<?php
-	}
-}
-
-
 ?>

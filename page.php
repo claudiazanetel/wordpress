@@ -1,18 +1,22 @@
 
 <?php 
-	get_header(); 
+	get_header();
+	$header_img = get_custom_header();
 ?>
 
 
 <div class='row'>
-	<div class='col-md-10 col-md-offset-1' id='all_page'>
-		<div class ='row  hidden-xs'><?php ctx_aj_site_title() ;?></div>
-			<div class=class='col-lg-12' id='div-headerimage'>
-				<a href="<?php echo get_home_url(); ?>">
-					<img id="banner" alt="" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>">
-				</a>
-			</div>			
+	<div class='col-sm-10 col-sm-offset-1' id='all_page'>
 		
+		<div class='row'>
+			<div class='col-xs-10 col-xs-offset-1 hidden-xs' id='headerimage'
+				style='background-image: url(<?php echo $header_img->url; ?>); padding-top: <?php echo ($header_img->height/$header_img->width) * 100 * 0.83; ?>%''>
+				<div class='logo'>
+					<a href="<?php echo home_url('/') ?>"><?php echo get_bloginfo('name'); ?></a>
+					<p><?php echo get_bloginfo('description'); ?></p>
+				</div>
+			</div>
+		</div>
 		<div class='row' id='page'>
 			<div class='col-md-9' id='main-page'>
 		    	<?php if (!is_front_page()):?>
