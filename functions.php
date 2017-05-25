@@ -88,4 +88,48 @@
 	);
 	add_theme_support( 'custom-header', $args );
 
+    add_filter('post_gallery','responsiveGallery',10,2);
+
+    function responsiveGallery($string,$attr) {
+
+        $output = '<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">';
+        $output .= '<div class="carousel-inner" role="listbox">';
+
+        $posts = get_posts(array('include' => $attr['ids'],'post_type' => 'attachment'));
+
+
+        foreach($posts as $key => $imagePost) {
+            if ($key == 0) {
+                $output .= '<div class="item active">';
+            } 
+            else {
+                $output .= '<div class="item">';
+            }
+
+            $output .= "<img src='".wp_get_attachment_image_src($imagePost->ID, 'small')[0]."'>";
+            $output .= '<div class="carousel-caption">';
+            $output .= $imagePost->post_excerpt;
+            $output .= '</div>';
+            $output .= '</div>';
+        }
+
+        $output .= '</div>';
+
+        $output .= 
+            '<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>';
+
+        $output .= '</div>';
+
+        return $output;
+    }
+
 ?>
+
+    
