@@ -130,6 +130,36 @@
         return $output;
     }
 
+
+    function render_table($atts, $content) {
+        //echo(strip_tags($content));
+        $rows = array_values(array_filter(explode("\n", strip_tags($content))));
+        var_dump($rows);
+        $output = '<table class="table">';
+        $headers = explode(",", $rows[0]);
+        $output .= '<thead><tr>';
+        foreach ($headers as $header) {
+            $output .= '<th>'.$header.'</th>';
+        }
+        $output .= '</tr></thead>';
+        $output .= '<tbody>';
+        foreach ($rows as $key => $r) {
+            if ($key < 1) continue;
+            $output .='<tr>';
+            $row = explode(",", $r);
+            
+            foreach ($row as $cell) {
+                $output .= '<td>'.$cell.'</td>';
+            }
+            $output .='</tr>';
+        }
+        $output .='</tbody>';       
+        $output .= '</table>';
+
+        return $output;
+    }
+    add_shortcode( 'table', 'render_table' );
+
 ?>
 
     

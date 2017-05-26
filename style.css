@@ -321,3 +321,19 @@ Carousel gallery
 		margin-bottom: 2%;
 	}
 }
+
+
+/**
+tables
+**/
+
+.table>tbody>tr>td {
+	border-top: 1px solid #9A8169;
+	color:#603913; 
+}
+
+.table>thead>tr>th {
+	border-bottom: 2px solid #9A8169;
+	text-align: center;
+	color:#603913; 
+}
