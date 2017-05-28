@@ -132,9 +132,7 @@
 
 
     function render_table($atts, $content) {
-        //echo(strip_tags($content));
         $rows = array_values(array_filter(explode("\n", strip_tags($content))));
-        var_dump($rows);
         $output = '<table class="table">';
         $headers = explode(",", $rows[0]);
         $output .= '<thead><tr>';
