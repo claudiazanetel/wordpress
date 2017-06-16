@@ -50,6 +50,16 @@ p{
 	color:#603913;
 }
 
+ul>li {
+
+	text-align: justify;
+	line-height:200%;
+	color:#603913;
+}
+
+a {
+	color:#603913;
+}
 
 
 body{
@@ -71,9 +81,14 @@ Menu
 	background: url(images/mp-sprite-content-bg.png);
 	background-size: 100%;
 	box-shadow: 0 8px 8px -6px black;
+	margin-top: 1%;
+	margin-bottom: 1%;
+
 }
 
-
+.collapse{
+	padding-right: 40px;
+}
 
 .icon-bar {
 	background-color: black;
@@ -94,8 +109,8 @@ li.menu-item > a {
 }
 
 #menu_row{
-	margin-right: 0px;
-	margin-bottom: 5%;
+	margin-left: -29px;
+	margin-bottom: 1%;
 }
 
 /**
@@ -337,3 +352,14 @@ tables
 	text-align: center;
 	color:#603913; 
 }
+
+/**
+frame
+**/
+
+iframe {
+	max-width: 90% !important;
+	margin: 5%;
+}
+
+

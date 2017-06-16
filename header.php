@@ -12,11 +12,11 @@
     <div class='container-fluid'>
         <!--<div class='row' id='main_row'>
             <div class='col-sm-10 col-sm-offset-1' id='main_offset'>-->
+            <!--class='col-lg-6 col-lg-offset-5 col-md-9 col-md-offset-2 col-sm-10 col-sm-offset-1-->
                 <div class='row' id='menu_row'>
-                    <div class='col-md-9 col-md-offset-2 col-sm-10 col-sm-offset-1' id='menu_col'>
+                    <div class='col-sm-10 col-sm-offset-1' id='menu_col'>
                     <!--<div class='col-xs-10 col-xs-offset-1' id='menu_col'>-->
                         <nav class="navbar" role="navigation">
-                            <div class="container">
                                 <div class="navbar-header">
                                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                                         <span class="sr-only">Toggle navigation</span>
@@ -32,7 +32,6 @@
                                         'menu'              => 'header-menu',
                                         'theme_location'    => 'header-menu',
                                         'depth'             => 2,
-                                        'container'         => 'div',
                                         'container_class'   => 'collapse navbar-collapse',
                                         'container_id'      => 'navbar',
                                         'menu_class'        => 'nav navbar-nav',
@@ -40,7 +39,6 @@
                                         'walker'            => new wp_bootstrap_navwalker())
                                     );
                                 ?>
-                            </div>
                         </nav>
                     </div>
                 </div>    
