@@ -44,7 +44,7 @@ h3{
 }
 
 
-p{
+p {
 	text-align: justify;
 	line-height:200%;
 	color:#603913;
@@ -63,14 +63,20 @@ a {
 
 
 body{
-	background:url(images/mp-background-tile.jpg) center top; 
+	background:url(images/mp-background-tile.jpg) center top;
 }
 
 .container-fluid { 
 	text-align:center;
-	overflow-x:hidden;
+
 }
 
+.allPage {
+	background: url(images/mp-sprite-content-bg.png);
+	margin: 5%;
+	background-size: 100%;
+	min-height: 500px;
+}
 
 /**
 Menu
@@ -78,12 +84,23 @@ Menu
 
 	
 .navbar {  
-	background: url(images/mp-sprite-content-bg.png);
-	background-size: 100%;
 	box-shadow: 0 8px 8px -6px black;
 	margin-top: 1%;
 	margin-bottom: 1%;
+}
 
+.brand {
+	width: 50px;
+	margin-top: -20px;
+}
+
+#menu_row {
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	z-index: 10 !important;
+	background: url(images/mp-sprite-content-bg.png);
+	background-size: 100%;
 }
 
 .collapse{
@@ -96,7 +113,8 @@ Menu
 
 li.menu-item > a {
 	color: #603913;
-    font-weight: bold;
+	font-weight: bold;
+	font-size: 1.7rem;
 }
 
 .navbar-brand {
@@ -104,37 +122,29 @@ li.menu-item > a {
     font-weight: bold;
 }
 
-#menu_col{
-	padding-right: 0px;
-}
-
 #menu_row{
-	margin-left: -29px;
 	margin-bottom: 1%;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 /**
 Page
 **/
 
-#all_page{
-	background: url(images/mp-sprite-content-bg.png);
-	background-size: 100%;
-	min-height: 500px;
-	padding: 15px;
-	padding-top: 5%;
+.mainPage {
+	padding-left: 9%;
+	padding-right: 9%;
 }
 
-
-#main-page{
-	padding-top: 30px;
-	padding-left: 10%;
-	padding-right: 3%;
+#main-page {
+	padding-top: 3%;
 }
-
 
 #sidebar-div{
 	padding-top: 3%;
+	position: sticky;
+	top:50px;
 }
 
 /*
@@ -143,9 +153,9 @@ Sidebar
 
 
 #searchform{
-	padding-bottom: 8%;
+	padding-bottom: 10%;
 	padding-top: 2%;
-	margin-bottom: 10%;
+	margin-bottom: 12%;
 }
 
 #searchform h2 {
@@ -205,10 +215,15 @@ Header image
   		0 0px 14px 10px rgba(0, 0, 0, 0.4);
 }
 
+.headerImage {
+	padding-left: 9%;
+}
+
 #headerimage{
 	background-size: contain;
-    background-repeat: no-repeat;
-    width: 85%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+    width: 90%;
     height: 0;
     border: 10px solid white;
 }
@@ -345,21 +360,44 @@ iframe {
 	margin: 5%;
 }
 
-@media (max-width: 780px) {
-	#main-page{
+/**
+mobile
+**/
+
+
+@media only screen and (max-width: 768px) {
+
+	.allPage {
+		margin-left:0%;
+		margin-right: 0%;
+	}
+
+	.navbar {  
+		background-size: 100%;
+		box-shadow: 0 0px 0px 0px white;
+		margin-top: 1%;
+		margin-bottom: 1%;
+	}
+
+	.brand {
+		width: 50px;
+		margin-top: -10px;
+	}
+
+/* 	#main-page{
 		padding-top: 30px;
 		padding-left: 5%;
 		padding-right: 5%;
+	} */
 
-	}
 	#widget{
 		margin-right: 0%;
 	}
 
 	#searchform{
-		padding-bottom: 2%;
+		padding-bottom: 2% !important;
 		padding-top: 2%;
-		margin-bottom: 2%;
+		margin-bottom: 2% !important;
 	}
 	.footer{
 		margin-top: 1%;

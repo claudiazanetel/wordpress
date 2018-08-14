@@ -10,21 +10,24 @@
     <?php //echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
     <body>
     <div class='container-fluid'>
+        <div class='row allPage'>
         <!--<div class='row' id='main_row'>
             <div class='col-sm-10 col-sm-offset-1' id='main_offset'>-->
             <!--class='col-lg-6 col-lg-offset-5 col-md-9 col-md-offset-2 col-sm-10 col-sm-offset-1-->
                 <div class='row' id='menu_row'>
-                    <div class='col-sm-10 col-sm-offset-1' id='menu_col'>
+                    <div class='col-sm-12' id='menu_col'>
                     <!--<div class='col-xs-10 col-xs-offset-1' id='menu_col'>-->
                         <nav class="navbar" role="navigation">
                                 <div class="navbar-header">
+                                    <a class="navbar-brand" href="">
+                                        <img class="brand" alt="Brand" src="http://wordpress.test/wp-content/uploads/2018/02/quadrifoglio_color.jpg">
+                                    </a>
                                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                                         <span class="sr-only">Toggle navigation</span>
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
                                     </button>
-                                    <a class="navbar-brand"></a>
                                 </div>
 
                                 <?php

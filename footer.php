@@ -5,6 +5,7 @@
 			</div>
 			 <!--   </div> closing main_offset-->
 	       <!-- </div> closing main_row-->
+		   </div>
         </div> <!--closing div container-->
     </body>
 </html>

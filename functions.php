@@ -29,7 +29,7 @@
         // Register the script like this for a theme:
         wp_register_script( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array( 'jquery' ) );
         // For either a plugin or a theme, you can then enqueue the script:
-        wp_enqueue_script( 'bootstrap', '', null, false, true );
+        wp_enqueue_script( 'bootstrap', '', null, false, false );
     }
     add_action( 'wp_enqueue_scripts', 'theme_js' );
 
