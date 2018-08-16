@@ -20,7 +20,7 @@
                         <nav class="navbar" role="navigation">
                                 <div class="navbar-header">
                                     <a class="navbar-brand" href="">
-                                        <img class="brand" alt="Brand" src="http://wordpress.test/wp-content/uploads/2018/02/quadrifoglio_color.jpg">
+                                        <img class="brand" alt="Brand" src="<?php echo(get_template_directory_uri() .'/images/quadrifoglio.png');?>">
                                     </a>
                                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                                         <span class="sr-only">Toggle navigation</span>
