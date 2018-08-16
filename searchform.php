@@ -1,5 +1,5 @@
 
-<form role="search" method="get" id="searchform" class="searchform" action="http://wordpress.dev/">
+<form role="search" method="get" id="searchform" class="searchform" action="<?php echo site_url(); ?>">
 	<h2>Search</h2>
 	<div class= 'col-lg-12'>
 	    <div class="input-group">
