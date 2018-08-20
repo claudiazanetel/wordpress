@@ -19,7 +19,7 @@
                     <!--<div class='col-xs-10 col-xs-offset-1' id='menu_col'>-->
                         <nav class="navbar" role="navigation">
                                 <div class="navbar-header">
-                                    <a class="navbar-brand" href="">
+                                    <a class="navbar-brand" href="/">
                                         <img class="brand" alt="Brand" src="<?php echo(get_template_directory_uri() .'/images/quadrifoglio.png');?>">
                                     </a>
                                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
