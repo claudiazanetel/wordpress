@@ -132,7 +132,7 @@
     ignore_errors: yes
 
   - name: install wp
-    command: wp core install --url=wordpress.dev --title=Example --admin_user=admin --admin_password=admin --admin_email=admin@wordpress.dev
+    command: wp core install --url=wordpress.test --title=Example --admin_user=admin --admin_password=admin --admin_email=admin@wordpress.dev
     args:
       chdir: "{{ document_root }}"
     ignore_errors: yes

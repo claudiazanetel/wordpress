@@ -7,7 +7,7 @@ Navigate into the project folder then execute the following commands:
 
 * `vagrant up` - will take a while to provision the machine
 * add an entry to the hosts file on your machine:    
-`192.168.33.30	wordpress.dev`
+`192.168.33.30	wordpress.test`
 * visit vagrant.dev
 
 ## Development
